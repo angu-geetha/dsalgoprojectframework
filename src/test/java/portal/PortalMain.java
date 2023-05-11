@@ -7,6 +7,7 @@ import java.time.Duration;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -21,16 +22,18 @@ import utilities.ExcelReader;
 
 public class PortalMain {
 	
-	public WebDriver chromedriver;
-	final String homePageUrl = "https://dsportalapp.herokuapp.com/" ;
+	public static WebDriver chromedriver;
+	
+	final String homePageUrl = "https://dsportalapp.herokuapp.com/" ; //this needs to go to config file
 	IndexPage indexPage ;
 	Homepage homepage;
 	Registerpage registerpage;
 	
 	
 	
-	@BeforeTest
+	@BeforeSuite
 	public void setUp() {
+		// load configuration class
 		chromedriver = Driver_Factory.loadDriver();
 		
 		 indexPage = new IndexPage(chromedriver);
