@@ -7,12 +7,16 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import driverFactory.Driver_Factory;
+import utilities.Configreader;
+import utilities.LoggerLoad;
 
 public class Registerpage {
 
 	public static WebDriver chromedriver ;
+	final String registerPageUrl = Configreader.getProperty("registerPageUrl");
 
-	final String homePageUrl = "https://dsportalapp.herokuapp.com/home";
+	
+
 	
 	@FindBy(xpath = "//input[@value='Register']") WebElement registerbtn;
 	@FindBy(name = "username") WebElement username;
@@ -20,12 +24,7 @@ public class Registerpage {
 	@FindBy(name = "password2") WebElement password2confirmation;
 	@FindBy(xpath = "//a[text()='Sign out']") WebElement signoutbtn;
 	@FindBy(xpath = "//div[@class='alert alert-primary']") WebElement errorElement;
-	//By registerbtn = By.xpath("//input[@value='Register']");
-	//By username = By.name("username");
-	//By password1 = By.name("password1");
-	//By password2confirmation = By.name("password2");
-	//By signoutbtn = By.xpath("//a[text()='Sign out']");
-	//By errorElement = By.xpath("//div[@class='alert alert-primary']");
+	
 
 	
 	
@@ -35,6 +34,13 @@ public class Registerpage {
 		
 	}
 
+	public void opensregisterPage() {
+		LoggerLoad.logInfo("Entering Method : opensregisterPage");
+		LoggerLoad.logDebug("The Register page URL is "+ registerPageUrl);
+		chromedriver.navigate().to(registerPageUrl);
+		LoggerLoad.logInfo("Exiting Method : opensregisterPage");
+		
+	}
 	public void clickRegisterbtn() {
 
 		(registerbtn).click();
