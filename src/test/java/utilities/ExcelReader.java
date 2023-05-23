@@ -21,8 +21,8 @@ public class ExcelReader {
 		
 		String cellContents = null;
 		try {
-			FileInputStream file = new FileInputStream(new File("/Users/AKandan1/eclipse-workspace/dsalgoprojectframework/src/test/resources/excel/dsAlgoInput.xlsx"));
-			 XSSFWorkbook workbook = new XSSFWorkbook(file);
+			FileInputStream file = new FileInputStream(new File("./src/test/resources/excel/dsAlgoInput.xlsx"));
+			XSSFWorkbook workbook = new XSSFWorkbook(file);
 			 XSSFSheet sheet = workbook.getSheet(sheetName);
 			 Row row = sheet.getRow(Integer.parseInt(rowNo));
 			 Cell cell = (Cell) row.getCell(Integer.parseInt(coloumnNo));
