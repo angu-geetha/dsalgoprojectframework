@@ -1,5 +1,8 @@
 package portal;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
@@ -11,10 +14,14 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+
+
 import driverFactory.Driver_Factory;
 import pagefactory.Homepage;
 import pagefactory.IndexPage;
+import pagefactory.LinkedListPage;
 import pagefactory.Registerpage;
+import pagefactory.Treepage;
 import utilities.Configreader;
 import utilities.ExcelReader;
 import utilities.LoggerLoad;
@@ -30,9 +37,11 @@ public class Register_TC {
 	IndexPage indexPage ;
 	Homepage homepage;
 	Registerpage registerpage;
+	LinkedListPage linkedlist;
+	Treepage treepage;
 	
 	
-	
+	@BeforeMethod
 	@BeforeSuite
 	public void setUp() {
 		// load configuration class
@@ -41,6 +50,9 @@ public class Register_TC {
 		indexPage = new IndexPage(chromedriver);
 		homepage =  new Homepage(chromedriver);
 		registerpage = new Registerpage(chromedriver);
+		linkedlist = new LinkedListPage(chromedriver);
+		treepage = new Treepage(chromedriver);
+		
 		
 	} 
 
@@ -51,7 +63,7 @@ public class Register_TC {
 		indexPage.clickGetStarted();
 		String url =chromedriver.getCurrentUrl();
 		LoggerLoad.logDebug("The current URL of the page is "+ url);
-		assertEquals(url, Configreader.getProperty("homePageUrl"));
+		AssertJUnit.assertEquals(url, Configreader.getProperty("homePageUrl"));
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase001()" );
 	}
 	
@@ -74,7 +86,7 @@ public class Register_TC {
 		}
 		String formMessage = registerpage.usernameErrorMsg();
 		String message1 =ExcelReader.readCell("RegisterPage", "1", "4");
-		assertEquals(formMessage, message1);
+		AssertJUnit.assertEquals(formMessage, message1);
 		LoggerLoad.logInfo("Exiting Method : testCase002" );
 	}
 		
@@ -94,7 +106,7 @@ public class Register_TC {
 		}
 		String formMessage = registerpage.passwordErrorMsg();
 		String message1 =ExcelReader.readCell("RegisterPage", "2", "4");
-		assertEquals(formMessage, message1);
+		AssertJUnit.assertEquals(formMessage, message1);
 		
 	}
 	
@@ -115,7 +127,7 @@ public class Register_TC {
 		}
 		String formMessage = registerpage.passwordconfirmationErrorMsg();
 		String message1 =ExcelReader.readCell("RegisterPage", "3", "4");
-		assertEquals(formMessage, message1);
+		AssertJUnit.assertEquals(formMessage, message1);
 		
 	}
 		
@@ -139,7 +151,7 @@ public class Register_TC {
 		String error =ExcelReader.readCell("RegisterPage", "4", "4");
 		
 		String errormsg = registerpage.getErrorElementg();
-		assertEquals(errormsg,error);
+		AssertJUnit.assertEquals(errormsg,error);
 	}
 	
 	@Test
@@ -162,7 +174,7 @@ public class Register_TC {
 		String error =ExcelReader.readCell("RegisterPage", "5", "4");
 		
 		String errormsg = registerpage.getErrorElementg();
-		assertEquals(errormsg,error);
+		AssertJUnit.assertEquals(errormsg,error);
 	}
 	
 	@Test
@@ -185,7 +197,7 @@ public class Register_TC {
 		String error =ExcelReader.readCell("RegisterPage", "6", "4");
 		
 		String errormsg = registerpage.getErrorElementg();
-		assertEquals(errormsg,error);
+		AssertJUnit.assertEquals(errormsg,error);
 	}
 		 
 	@Test
@@ -207,7 +219,7 @@ public class Register_TC {
 		registerpage.clickRegisterbtn();
 		String error =ExcelReader.readCell("RegisterPage", "7", "4");
 		String errormsg = registerpage.getErrorElementg();
-		assertEquals(errormsg,error);
+		AssertJUnit.assertEquals(errormsg,error);
 		
 		
 	}
@@ -231,7 +243,7 @@ public class Register_TC {
 		registerpage.clickRegisterbtn();
 		String error =ExcelReader.readCell("RegisterPage", "8", "4");
 		String errormsg = registerpage.getErrorElementg();
-		assertEquals(errormsg,error);
+		AssertJUnit.assertEquals(errormsg,error);
 	
 	
 	}
@@ -255,7 +267,7 @@ public class Register_TC {
 			registerpage.clickRegisterbtn();
 			String error =ExcelReader.readCell("RegisterPage", "9", "4");
 			String errormsg = registerpage.getErrorElementg();
-			assertEquals(errormsg,error);
+			AssertJUnit.assertEquals(errormsg,error);
 		
 		}
 		
@@ -278,7 +290,7 @@ public class Register_TC {
 			registerpage.clickRegisterbtn();
 			String error =ExcelReader.readCell("RegisterPage", "10", "4");
 			String errormsg = registerpage.getErrorElementg();
-			assertEquals(errormsg,error);
+			AssertJUnit.assertEquals(errormsg,error);
 		
 		}
 		@Test
@@ -300,7 +312,7 @@ public class Register_TC {
 			registerpage.clickRegisterbtn();
 			String error =ExcelReader.readCell("RegisterPage", "11", "4");
 			String errormsg = registerpage.getErrorElementg();
-			assertEquals(errormsg,error);
+			AssertJUnit.assertEquals(errormsg,error);
 		
 		}
 	

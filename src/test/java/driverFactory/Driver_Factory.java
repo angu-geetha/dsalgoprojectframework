@@ -10,12 +10,17 @@ public class Driver_Factory {
 	public static WebDriver driver;
 	
 	public static WebDriver loadDriver() {
-		driver = new ChromeDriver();
+		if(driver == null) {
+			driver = new ChromeDriver();
+		}
+		
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 
 		driver.manage().window().maximize();
 		return driver;
 	}
+	
+	
 	
 	
 }

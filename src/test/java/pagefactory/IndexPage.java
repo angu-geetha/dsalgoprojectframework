@@ -12,7 +12,7 @@ import utilities.LoggerLoad;
 
 public class IndexPage {
 	WebDriver chromedriver ;
-	final String homePageUrl = Configreader.getProperty("url"); ;
+	final String dsalgoPageUrl = Configreader.getProperty("url"); ;
 	
 	@FindBy(xpath = "//button[text()='Get Started']") WebElement GetStarted;
 	//By getStartedButton = By.xpath("//button[text()='Get Started']");
@@ -31,8 +31,8 @@ public class IndexPage {
 	
 	public void openDsAlgoPage() {
 		LoggerLoad.logInfo("Entering Method : IndexPage.openDsAlgoPage");
-		LoggerLoad.logDebug("The Home page URL is "+ homePageUrl);
-		chromedriver.get(homePageUrl);
+		LoggerLoad.logDebug("The Home page URL is "+ dsalgoPageUrl);
+		chromedriver.get(dsalgoPageUrl);
 		LoggerLoad.logInfo("Exiting Method : IndexPage.openDsAlgoPage");
 		
 	}
