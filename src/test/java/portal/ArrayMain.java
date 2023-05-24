@@ -115,7 +115,7 @@ public class ArrayMain {
   public void testcase007() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.tryHere();
 	  String readPythonCode =ExcelReader.readCell("Array", "1", "0");
 	  String expectedOutput =ExcelReader.readCell("Array", "1", "1");
@@ -129,7 +129,7 @@ public class ArrayMain {
   public void testcase008()
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.tryHere();
 	  String readPythonCode =ExcelReader.readCell("Array", "2", "0");
 	  String expectedOutput =ExcelReader.readCell("Array", "2", "1");
@@ -143,7 +143,7 @@ public class ArrayMain {
   public void testcase009() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.SearchtheArray();
 	  String readPythonCode =ExcelReader.readCell("Array", "3", "0");
@@ -158,7 +158,7 @@ public class ArrayMain {
   public void testcase010() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.SearchtheArray();
 	  String readPythonCode =ExcelReader.readCell("Array", "4", "0");
@@ -175,7 +175,7 @@ public class ArrayMain {
   public void testcase011()
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.SearchtheArray();
 	  String readPythonCode =ExcelReader.readCell("Array", "2", "0");
@@ -189,7 +189,7 @@ public class ArrayMain {
   public void testcase012() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.maxConsecutive();
 	  String readPythonCode =ExcelReader.readCell("Array", "5", "0");
@@ -203,7 +203,7 @@ public class ArrayMain {
   public void testcase013() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.maxConsecutive();
 	  String readPythonCode =ExcelReader.readCell("Array", "6", "0");
@@ -217,7 +217,7 @@ public class ArrayMain {
   public void testcase014()
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.maxConsecutive();
 	  String readPythonCode =ExcelReader.readCell("Array", "2", "0");
@@ -231,7 +231,7 @@ public class ArrayMain {
   public void testcase015() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.evenNumberDigits();
 	  String readPythonCode =ExcelReader.readCell("Array", "7", "0");
@@ -245,7 +245,7 @@ public class ArrayMain {
   public void testcase016() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.evenNumberDigits();
 	  String readPythonCode =ExcelReader.readCell("Array", "8", "0");
@@ -261,7 +261,7 @@ public class ArrayMain {
   public void testcase017()
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.evenNumberDigits();
 	  String readPythonCode =ExcelReader.readCell("Array", "2", "0");
@@ -275,7 +275,7 @@ public class ArrayMain {
   public void testcase018() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.squaresSorted();
 	  String readPythonCode =ExcelReader.readCell("Array", "9", "0");
@@ -289,7 +289,7 @@ public class ArrayMain {
   public void testcase019() throws InterruptedException
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.squaresSorted();
 	  String readPythonCode =ExcelReader.readCell("Array", "10", "0");
@@ -303,7 +303,7 @@ public class ArrayMain {
   public void testcase020()
   {
 	  arrayPage.openArrayPage();
-	  arrayPage.applOfArrayPython();
+	  arrayPage.applicationOfArrayPython();
 	  arrayPage.practiceArray();
 	  arrayPage.squaresSorted();
 	  String readPythonCode =ExcelReader.readCell("Array", "2", "0");
