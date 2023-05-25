@@ -2,6 +2,7 @@ package pagefactory;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.core.tools.picocli.CommandLine.Help.Ansi.Text;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 import utilities.ExcelReader;
+import utilities.LoggerLoad;
 
 public class ArrayPage {
 	
@@ -53,7 +55,7 @@ public class ArrayPage {
 	WebElement basicOperationListinPython;
 	
 	@FindBy(xpath = "//a[@href ='applications-of-array']")
-	WebElement appOfArrayPython;
+	WebElement applicationOfArrayPython;
 	
 	@FindBy (xpath="//a[@href='/tryEditor']")
 	WebElement TryHere;
@@ -118,24 +120,33 @@ public class ArrayPage {
 	}
 	
 	public void dropdownArray() {
+		LoggerLoad.logInfo("click"+DropDown.getText()+"on drop down");
 		DropDown.click();
+		
+		LoggerLoad.logInfo("click" + DropDown.getText() + "from the dropdown");
 		dropdownArray.click();
+		
 	}
 
 	public void arraysinPython() {
+		LoggerLoad.logInfo("click" + ArraysinPython.getText() + "on array page");
 		ArraysinPython.click();
 	}
 	
 	public void arrayUsingListPython() {
+		LoggerLoad.logInfo("click" + arrayUsingListPython.getText() + "on array page");
 		arrayUsingListPython.click();
 	}
 	
 	public void basicListsinPython() {
+		LoggerLoad.logInfo("click" + basicOperationListinPython.getText() + "on array page");
 		basicOperationListinPython.click();
 	}
 	
-	public void applOfArrayPython() {
-		appOfArrayPython.click();
+	public void applicationOfArrayPython() {
+	
+		LoggerLoad.logInfo("click" + applicationOfArrayPython .getText() + "on array page");
+		applicationOfArrayPython.click();
 	}
 
 	public void tryHere() {
@@ -146,14 +157,14 @@ public class ArrayPage {
 		tryEditorBox.sendKeys(Keys.HOME, Keys.chord(Keys.SHIFT, Keys.END), typeCode);
 	}
 	
-	public void runCode()
-	{
+	public void runCode(){
+	LoggerLoad.logInfo("click Run button");
 		Run.click();
 	}
 	
-	public void submitCode()
-	{
-		submit.click();
+	public void submitCode() {
+	LoggerLoad.logInfo("click Submit button");
+	submit.click();
 	}
 	
 	public String getOutput() throws InterruptedException
@@ -170,22 +181,27 @@ public class ArrayPage {
 	}
 	
 	public void practiceArray() {
+		LoggerLoad.logInfo("click" + practiceArray.getText()+ "on the array page");
 		practiceArray.click();
 	}
 	
 	public void SearchtheArray () {
+		LoggerLoad.logInfo("click" + SearchtheArray.getText() + "on the array page");
 		SearchtheArray.click();
 	}
 	
 	public void maxConsecutive() {
+		LoggerLoad.logInfo("click" + maxConsecutive.getText() + "on the array page");
 		maxConsecutive.click();
 	}
 	
 	public void evenNumberDigits() {
+		LoggerLoad.logInfo("click" + evenNumberDigits.getText() + "on the array page");
 		evenNumberDigits.click();
 	}
 	
 	public void squaresSorted() {
+		LoggerLoad.logInfo("click" + squaresOfSortedArray.getText() + "on the array page");
 		squaresOfSortedArray.click();
 	}
 	
