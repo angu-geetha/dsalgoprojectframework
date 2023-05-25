@@ -1,5 +1,11 @@
-package portal;
+package testcases;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.AssertJUnit;
@@ -12,12 +18,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import driverFactory.Driver_Factory;
-import pagefactory.Homepage;
-import pagefactory.IndexPage;
-import pagefactory.LinkedListPage;
-import pagefactory.Registerpage;
+import pageObjects.Homepage;
+import pageObjects.LinkedListPage;
+import pageObjects.Registerpage;
+import pageObjects.StartPage;
 import utilities.Configreader;
 import utilities.ExcelReader;
+import utilities.Helper;
 import utilities.LoggerLoad;
 
 public class LinkedList_TC {
@@ -36,6 +43,7 @@ public class LinkedList_TC {
 	String deletionlinkedlistpage;
 	String practicequestionpage;
 
+	
 	@BeforeTest(groups = { "Introduction", "linkedlist", "typesOfLinkedList", "ImplementLinkedList", "Traversal",
 			"Insertion", "deletion", "practice" })
 	public void setUp() {
@@ -87,6 +95,8 @@ public class LinkedList_TC {
 		String url = chromedriver.getCurrentUrl();
 		LoggerLoad.logDebug("The current URL of the page is " + url);
 		AssertJUnit.assertEquals(url, homePageUrl);
+		
+		
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase002()");
 
 	}
@@ -236,7 +246,7 @@ public class LinkedList_TC {
 		String url = chromedriver.getCurrentUrl();
 
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, typesoflinkedlisturl);
+		AssertJUnit.assertEquals(url, typesoflinkedlisturl);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase012()");
 	}
@@ -250,7 +260,7 @@ public class LinkedList_TC {
 		String url = chromedriver.getCurrentUrl();
 
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, tryherelinkedlistpage);
+		AssertJUnit.assertEquals(url, tryherelinkedlistpage);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase013()");
 	}
@@ -267,7 +277,7 @@ public class LinkedList_TC {
 
 		String runresult = linkedlist.getresult();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "1", "2");
-		assertEquals(runresult, message1);
+		AssertJUnit.assertEquals(runresult, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase014()");
 	}
@@ -284,7 +294,7 @@ public class LinkedList_TC {
 
 		String errormsg = linkedlist.getErrormessage();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "2", "2");
-		assertEquals(errormsg, message1);
+		AssertJUnit.assertEquals(errormsg, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase015()");
 	}
@@ -298,7 +308,7 @@ public class LinkedList_TC {
 
 		String url = chromedriver.getCurrentUrl();
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, ImplementLinkedListpage);
+		AssertJUnit.assertEquals(url, ImplementLinkedListpage);
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase016()");
 	}
 
@@ -311,7 +321,7 @@ public class LinkedList_TC {
 		String url = chromedriver.getCurrentUrl();
 
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, tryherelinkedlistpage);
+		AssertJUnit.assertEquals(url, tryherelinkedlistpage);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase017()");
 	}
@@ -328,7 +338,7 @@ public class LinkedList_TC {
 
 		String runresult = linkedlist.getresult();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "1", "2");
-		assertEquals(runresult, message1);
+		AssertJUnit.assertEquals(runresult, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase018()");
 	}
@@ -345,7 +355,7 @@ public class LinkedList_TC {
 
 		String errormsg = linkedlist.getErrormessage();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "2", "2");
-		assertEquals(errormsg, message1);
+		AssertJUnit.assertEquals(errormsg, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase019()");
 	}
@@ -359,7 +369,7 @@ public class LinkedList_TC {
 
 		String url = chromedriver.getCurrentUrl();
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, traversalpage);
+		AssertJUnit.assertEquals(url, traversalpage);
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase0020()");
 
 	}
@@ -373,7 +383,7 @@ public class LinkedList_TC {
 		String url = chromedriver.getCurrentUrl();
 
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, tryherelinkedlistpage);
+		AssertJUnit.assertEquals(url, tryherelinkedlistpage);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase021()");
 	}
@@ -390,7 +400,7 @@ public class LinkedList_TC {
 
 		String runresult = linkedlist.getresult();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "1", "2");
-		assertEquals(runresult, message1);
+		AssertJUnit.assertEquals(runresult, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase022()");
 	}
@@ -407,7 +417,7 @@ public class LinkedList_TC {
 
 		String errormsg = linkedlist.getErrormessage();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "2", "2");
-		assertEquals(errormsg, message1);
+		AssertJUnit.assertEquals(errormsg, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase023()");
 	}
@@ -421,7 +431,7 @@ public class LinkedList_TC {
 
 		String url = chromedriver.getCurrentUrl();
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, Insertionlinkedlistpage);
+		AssertJUnit.assertEquals(url, Insertionlinkedlistpage);
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase024()");
 
 	}
@@ -435,7 +445,7 @@ public class LinkedList_TC {
 		String url = chromedriver.getCurrentUrl();
 
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, tryherelinkedlistpage);
+		AssertJUnit.assertEquals(url, tryherelinkedlistpage);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase025()");
 	}
@@ -452,7 +462,7 @@ public class LinkedList_TC {
 
 		String runresult = linkedlist.getresult();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "1", "2");
-		assertEquals(runresult, message1);
+		AssertJUnit.assertEquals(runresult, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase026()");
 	}
@@ -469,7 +479,7 @@ public class LinkedList_TC {
 
 		String errormsg = linkedlist.getErrormessage();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "2", "2");
-		assertEquals(errormsg, message1);
+		AssertJUnit.assertEquals(errormsg, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase027()");
 	}
@@ -483,7 +493,7 @@ public class LinkedList_TC {
 
 		String url = chromedriver.getCurrentUrl();
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, deletionlinkedlistpage);
+		AssertJUnit.assertEquals(url, deletionlinkedlistpage);
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase028()");
 	}
 
@@ -496,7 +506,7 @@ public class LinkedList_TC {
 		String url = chromedriver.getCurrentUrl();
 
 		LoggerLoad.logDebug("The current URL of the page is " + url);
-		assertEquals(url, tryherelinkedlistpage);
+		AssertJUnit.assertEquals(url, tryherelinkedlistpage);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase029()");
 	}
@@ -513,7 +523,7 @@ public class LinkedList_TC {
 
 		String runresult = linkedlist.getresult();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "1", "2");
-		assertEquals(runresult, message1);
+		AssertJUnit.assertEquals(runresult, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase030()");
 	}
@@ -530,7 +540,7 @@ public class LinkedList_TC {
 
 		String errormsg = linkedlist.getErrormessage();
 		String message1 = ExcelReader.readCell("LinkedlistPage", "2", "2");
-		assertEquals(errormsg, message1);
+		AssertJUnit.assertEquals(errormsg, message1);
 
 		LoggerLoad.logInfo("Exiting Method : Register_TC.testCase031()");
 	}
@@ -547,7 +557,7 @@ public void testCase032() {
 	
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
-	assertEquals(url,practicequestionpage);
+	AssertJUnit.assertEquals(url,practicequestionpage);
 	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase032()" );
 }
 

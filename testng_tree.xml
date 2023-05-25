@@ -10,7 +10,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -22,7 +22,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -34,7 +34,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -46,7 +46,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -58,7 +58,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -70,7 +70,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -82,7 +82,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -94,7 +94,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -106,7 +106,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -118,7 +118,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -130,7 +130,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -143,7 +143,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -155,7 +155,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 
@@ -167,7 +167,7 @@
 		  
 	  </groups>
     <classes>
-      <class name="portal.Tree_TC"/>
+      <class name="testcases.Tree_TC"/>
     
     </classes>
   </test> 

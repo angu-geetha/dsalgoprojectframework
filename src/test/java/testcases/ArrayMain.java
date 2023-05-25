@@ -1,4 +1,4 @@
-package portal;
+package testcases;
 
 import static org.testng.Assert.assertEquals;
 
@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import driverFactory.Driver_Factory;
-import pagefactory.ArrayPage;
+import pageObjects.ArrayPage;
 import utilities.ExcelReader;
 
 public class ArrayMain {

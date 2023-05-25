@@ -1,5 +1,9 @@
-package portal;
+package testcases;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.AssertJUnit;
+import org.testng.ITestContext;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.AssertJUnit;
@@ -17,11 +21,12 @@ import org.testng.annotations.Test;
 
 
 import driverFactory.Driver_Factory;
-import pagefactory.Homepage;
-import pagefactory.IndexPage;
-import pagefactory.LinkedListPage;
-import pagefactory.Registerpage;
-import pagefactory.Treepage;
+import pageObjects.Homepage;
+import pageObjects.LinkedListPage;
+import pageObjects.Registerpage;
+import pageObjects.StartPage;
+import pageObjects.Treepage;
+import screenshots.Screenshot;
 import utilities.Configreader;
 import utilities.ExcelReader;
 import utilities.LoggerLoad;
@@ -34,20 +39,21 @@ public class Register_TC {
 	public static WebDriver chromedriver;
 	
 	
-	IndexPage indexPage ;
+	StartPage indexPage ;
 	Homepage homepage;
 	Registerpage registerpage;
 	LinkedListPage linkedlist;
 	Treepage treepage;
 	
 	
-	@BeforeMethod
+	
 	@BeforeSuite
-	public void setUp() {
+	public void setUp(ITestContext context) {
 		// load configuration class
 		chromedriver = Driver_Factory.loadDriver();
+		context.setAttribute("WebDriver", chromedriver);
 		Configreader.loadProperty();
-		indexPage = new IndexPage(chromedriver);
+		indexPage = new StartPage(chromedriver);
 		homepage =  new Homepage(chromedriver);
 		registerpage = new Registerpage(chromedriver);
 		linkedlist = new LinkedListPage(chromedriver);
@@ -92,6 +98,7 @@ public class Register_TC {
 		
 	@Test
 	public void testCase003() {
+		LoggerLoad.logInfo("Entering Method : testCase003" );
 		registerpage.opensregisterPage();
 		String userName =ExcelReader.readCell("RegisterPage", "2", "1");
 		registerpage.inputusername(userName);
@@ -107,11 +114,12 @@ public class Register_TC {
 		String formMessage = registerpage.passwordErrorMsg();
 		String message1 =ExcelReader.readCell("RegisterPage", "2", "4");
 		AssertJUnit.assertEquals(formMessage, message1);
-		
+		LoggerLoad.logInfo("Exiting Method : testCase003" );
 	}
 	
 	@Test
 	public void testCase004() {
+		LoggerLoad.logInfo("Entering Method : testCase004" );
 		registerpage.opensregisterPage();
 		String userName =ExcelReader.readCell("RegisterPage", "3", "1");
 		registerpage.inputusername(userName);
@@ -128,11 +136,13 @@ public class Register_TC {
 		String formMessage = registerpage.passwordconfirmationErrorMsg();
 		String message1 =ExcelReader.readCell("RegisterPage", "3", "4");
 		AssertJUnit.assertEquals(formMessage, message1);
+		LoggerLoad.logInfo("Exiting Method : testCase004" );
 		
 	}
 		
 	@Test
 	public void testCase005() {
+		LoggerLoad.logInfo("Entering Method : testCase005" );
 		registerpage.opensregisterPage();
 		registerpage.clearusername();
 
@@ -151,11 +161,15 @@ public class Register_TC {
 		String error =ExcelReader.readCell("RegisterPage", "4", "4");
 		
 		String errormsg = registerpage.getErrorElementg();
-		AssertJUnit.assertEquals(errormsg,error);
+		
+			AssertJUnit.assertEquals(errormsg,error);
+			LoggerLoad.logInfo("Exiting Method : testCase005" );
+		
 	}
 	
 	@Test
 	public void testCase006() {
+		LoggerLoad.logInfo("Entering Method : testCase006" );
 		registerpage.opensregisterPage();
 		registerpage.clearusername();
 
@@ -175,10 +189,12 @@ public class Register_TC {
 		
 		String errormsg = registerpage.getErrorElementg();
 		AssertJUnit.assertEquals(errormsg,error);
+		LoggerLoad.logInfo("Exiting Method : testCase006" );
 	}
 	
 	@Test
 	public void testCase007() {
+		LoggerLoad.logInfo("Entering Method : testCase007" );
 		registerpage.opensregisterPage();
 		registerpage.clearusername();
 
@@ -198,10 +214,12 @@ public class Register_TC {
 		
 		String errormsg = registerpage.getErrorElementg();
 		AssertJUnit.assertEquals(errormsg,error);
+		LoggerLoad.logInfo("Exiting Method : testCase007" );
 	}
 		 
 	@Test
 	public void testCase008() {
+		LoggerLoad.logInfo("Entering Method : testCase008" );
 		registerpage.opensregisterPage();
 		registerpage.clearusername();
 
@@ -220,12 +238,14 @@ public class Register_TC {
 		String error =ExcelReader.readCell("RegisterPage", "7", "4");
 		String errormsg = registerpage.getErrorElementg();
 		AssertJUnit.assertEquals(errormsg,error);
+		LoggerLoad.logInfo("Exiting Method : testCase008" );
 		
 		
 	}
 	 
 	@Test
 	public void testCase009() {
+		LoggerLoad.logInfo("Entering Method : testCase009" );
 		registerpage.opensregisterPage();
 		registerpage.clearusername();
 
@@ -244,12 +264,13 @@ public class Register_TC {
 		String error =ExcelReader.readCell("RegisterPage", "8", "4");
 		String errormsg = registerpage.getErrorElementg();
 		AssertJUnit.assertEquals(errormsg,error);
-	
+		LoggerLoad.logInfo("Exiting Method : testCase009" );
 	
 	}
 	 
 		@Test
 		public void testCase010() {
+			LoggerLoad.logInfo("Entering Method : testCase010" );
 			registerpage.opensregisterPage();
 			registerpage.clearusername();
 
@@ -268,11 +289,12 @@ public class Register_TC {
 			String error =ExcelReader.readCell("RegisterPage", "9", "4");
 			String errormsg = registerpage.getErrorElementg();
 			AssertJUnit.assertEquals(errormsg,error);
-		
+			LoggerLoad.logInfo("Exiting Method : testCase010" );
 		}
 		
 		@Test
 		public void testCase011() {
+			LoggerLoad.logInfo("Entering Method : testCase011" );
 			registerpage.opensregisterPage();
 			registerpage.clearusername();
 
@@ -291,10 +313,12 @@ public class Register_TC {
 			String error =ExcelReader.readCell("RegisterPage", "10", "4");
 			String errormsg = registerpage.getErrorElementg();
 			AssertJUnit.assertEquals(errormsg,error);
+			LoggerLoad.logInfo("Exiting Method : testCase011" );
 		
 		}
 		@Test
 		public void testCase012() {
+			LoggerLoad.logInfo("Entering Method : testCase012" );
 			registerpage.opensregisterPage();
 			registerpage.clearusername();
 
@@ -313,6 +337,7 @@ public class Register_TC {
 			String error =ExcelReader.readCell("RegisterPage", "11", "4");
 			String errormsg = registerpage.getErrorElementg();
 			AssertJUnit.assertEquals(errormsg,error);
+			LoggerLoad.logInfo("Exiting Method : testCase012" );
 		
 		}
 	

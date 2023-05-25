@@ -1,4 +1,4 @@
-package portal;
+package testcases;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -13,8 +13,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import driverFactory.Driver_Factory;
-import pagefactory.LinkedListPage;
-import pagefactory.Treepage;
+import pageObjects.LinkedListPage;
+import pageObjects.Treepage;
 import utilities.Configreader;
 import utilities.ExcelReader;
 import utilities.LoggerLoad;
@@ -449,7 +449,7 @@ public void testCase028() {
 }
 @Test(priority = 4 ,groups = { "typesofbinarytrees" })
 public void testCase029() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase029()" );
 	//chromedriver.navigate().to(overviewtreepage);
 	treepage.clicktryherebtn();
 	
@@ -457,13 +457,13 @@ public void testCase029() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,tryheretreepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase029()" );
 
 }
 @Test(priority = 5 ,groups = { "typesofbinarytrees" })
 
 public void testCase030() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase030()" );
 	//chromedriver.navigate().to(treepageurl);
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "1", "1");
@@ -474,11 +474,11 @@ public void testCase030() {
 	String message1 =ExcelReader.readCell("Treepage", "1", "2");
 	AssertJUnit.assertEquals(runresult, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase030()" );
 }
 @Test(priority = 6 ,groups = { "typesofbinarytrees" })
 public void testCase031() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase031()" );
 	chromedriver.navigate().refresh();
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "2", "1");
@@ -489,11 +489,11 @@ public void testCase031() {
 	String message1 =ExcelReader.readCell("Treepage", "2", "2");
 	AssertJUnit.assertEquals(errormsg, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase031()" );
 }
 @Test(priority = 3 ,groups = { "implementationinpython" })
 public void testCase032() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase032()" );
 //	chromedriver.navigate().to(treepageurl);
 	treepage.clickImplementationsButton();
 	
@@ -501,11 +501,11 @@ public void testCase032() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,implementationspage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase032()" );
 }
 @Test(priority = 4 ,groups = { "implementationinpython" })
 public void testCase033() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase033()" );
 	//chromedriver.navigate().to(overviewtreepage);
 	treepage.clicktryherebtn();
 	
@@ -513,13 +513,13 @@ public void testCase033() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,tryheretreepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase033()" );
 
 }
 @Test(priority = 5 ,groups = { "implementationinpython" })
 
 public void testCase034() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase034()" );
 	//chromedriver.navigate().to(treepageurl);
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "1", "1");
@@ -530,12 +530,11 @@ public void testCase034() {
 	String message1 =ExcelReader.readCell("Treepage", "1", "2");
 	AssertJUnit.assertEquals(runresult, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase034()" );
 }
 @Test(priority = 6 ,groups = { "implementationinpython" })
 public void testCase035() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase011()" );
-	chromedriver.navigate().refresh();
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase035()");
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "2", "1");
 	treepage.sendPythonCode(pythoncode);
@@ -545,11 +544,11 @@ public void testCase035() {
 	String message1 =ExcelReader.readCell("Treepage", "2", "2");
 	AssertJUnit.assertEquals(errormsg, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase035()" );
 }
 @Test(priority = 3 ,groups = { "binarytreetraversals" })
 public void testCase036() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase036()" );
 //	chromedriver.navigate().to(treepageurl);
 	treepage.clickBinaryTreeTraversalsButton();
 	
@@ -557,11 +556,11 @@ public void testCase036() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,binarytreetraversalspage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase036()" );
 }
 @Test(priority = 4 ,groups = { "binarytreetraversals" })
 public void testCase037() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase037()" );
 	//chromedriver.navigate().to(overviewtreepage);
 	treepage.clicktryherebtn();
 	
@@ -569,13 +568,13 @@ public void testCase037() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,tryheretreepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase037()" );
 
 }
 @Test(priority = 5 ,groups = { "binarytreetraversals" })
 
 public void testCase038() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase038()" );
 	//chromedriver.navigate().to(treepageurl);
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "1", "1");
@@ -586,11 +585,11 @@ public void testCase038() {
 	String message1 =ExcelReader.readCell("Treepage", "1", "2");
 	AssertJUnit.assertEquals(runresult, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase038()" );
 }
 @Test(priority = 6 ,groups = { "binarytreetraversals" })
 public void testCase039() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase039()" );
 	chromedriver.navigate().refresh();
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "2", "1");
@@ -601,12 +600,12 @@ public void testCase039() {
 	String message1 =ExcelReader.readCell("Treepage", "2", "2");
 	AssertJUnit.assertEquals(errormsg, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase039()" );
 }
 @Test(priority = 3 ,groups = { "implementation" })
 
 public void testCase040() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase040()" );
 //	chromedriver.navigate().to(treepageurl);
 	treepage.clickImplementationBinaryTreesButton();
 	
@@ -614,13 +613,13 @@ public void testCase040() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,implementationofbinarypage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase040()" );
 }
 
 @Test(priority = 4 ,groups = { "implementation" })
 
 public void testCase041() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase041()" );
 	//chromedriver.navigate().to(overviewtreepage);
 	treepage.clicktryherebtn();
 	
@@ -628,14 +627,14 @@ public void testCase041() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,tryheretreepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase041()" );
 
 }
 @Test(priority = 5 ,groups = { "implementation" })
 
 
 public void testCase042() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase042()" );
 	//chromedriver.navigate().to(treepageurl);
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "1", "1");
@@ -646,12 +645,12 @@ public void testCase042() {
 	String message1 =ExcelReader.readCell("Treepage", "1", "2");
 	AssertJUnit.assertEquals(runresult, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase042()" );
 }
 @Test(priority = 6,groups = { "implementation" })
 
 public void testCase043() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase043()" );
 	chromedriver.navigate().refresh();
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "2", "1");
@@ -662,12 +661,12 @@ public void testCase043() {
 	String message1 =ExcelReader.readCell("Treepage", "2", "2");
 	AssertJUnit.assertEquals(errormsg, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase043()" );
 }
 @Test(priority = 3 ,groups = { "application" })
 
 public void testCase044() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase044()" );
 //	chromedriver.navigate().to(treepageurl);
 	treepage.clickApplicationBinaryTreesButton();
 	
@@ -675,11 +674,11 @@ public void testCase044() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,applicationbinarytreespage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase044()" );
 }
 @Test(priority = 4 ,groups = { "application" })
 public void testCase045() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase045()" );
 	//chromedriver.navigate().to(overviewtreepage);
 	treepage.clicktryherebtn();
 	
@@ -687,14 +686,14 @@ public void testCase045() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,tryheretreepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase045()" );
 
 
 }
 
 @Test(priority = 5 ,groups = { "application" })
 public void testCase046() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase046()" );
 	//chromedriver.navigate().to(treepageurl);
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "1", "1");
@@ -705,11 +704,11 @@ public void testCase046() {
 	String message1 =ExcelReader.readCell("Treepage", "1", "2");
 	AssertJUnit.assertEquals(runresult, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase046()" );
 }
 @Test(priority = 6,groups = { "application" })
 public void testCase047() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase047()" );
 	chromedriver.navigate().refresh();
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "2", "1");
@@ -720,11 +719,11 @@ public void testCase047() {
 	String message1 =ExcelReader.readCell("Treepage", "2", "2");
 	AssertJUnit.assertEquals(errormsg, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase047()" );
 }
 @Test(priority = 3 ,groups = { "binarysearch" })
 public void testCase048() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase048()" );
 //	chromedriver.navigate().to(treepageurl);
 	treepage.clickBinarySearchTreesButton();
 	
@@ -732,12 +731,12 @@ public void testCase048() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,binarysearchtreesbutton);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase048()" );
 }
 @Test(priority = 4 ,groups = { "binarysearch" })
 
 public void testCase049() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase049()" );
 	//chromedriver.navigate().to(overviewtreepage);
 	treepage.clicktryherebtn();
 	
@@ -745,14 +744,14 @@ public void testCase049() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,tryheretreepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase049()" );
 
 
 }@Test(priority = 5 ,groups = { "binarysearch" })
 
 
 public void testCase050() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase050()" );
 	//chromedriver.navigate().to(treepageurl);
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "1", "1");
@@ -763,12 +762,12 @@ public void testCase050() {
 	String message1 =ExcelReader.readCell("Treepage", "1", "2");
 	AssertJUnit.assertEquals(runresult, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase050()" );
 }
 @Test(priority = 6 ,groups = { "binarysearch" })
 
 public void testCase051() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase051()" );
 	chromedriver.navigate().refresh();
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "2", "1");
@@ -779,12 +778,12 @@ public void testCase051() {
 	String message1 =ExcelReader.readCell("Treepage", "2", "2");
 	AssertJUnit.assertEquals(errormsg, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase051()" );
 }
 @Test(priority = 3 ,groups = { "implementationofbst" })
 
 public void testCase052() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase052()" );
 //	chromedriver.navigate().to(treepageurl);
 	treepage.clickImplementationOfbstButton();
 	
@@ -792,11 +791,11 @@ public void testCase052() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,implementationofbstpage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase004()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase052()" );
 }
 @Test(priority = 4 ,groups = { "implementationofbst" })
 public void testCase053() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase053()" );
 	//chromedriver.navigate().to(overviewtreepage);
 	treepage.clicktryherebtn();
 	
@@ -804,13 +803,13 @@ public void testCase053() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,tryheretreepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase005()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase053()" );
 
 
 }
 @Test(priority = 5 ,groups = { "implementationofbst" })
 public void testCase054() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase054()" );
 	//chromedriver.navigate().to(treepageurl);
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "1", "1");
@@ -821,11 +820,11 @@ public void testCase054() {
 	String message1 =ExcelReader.readCell("Treepage", "1", "2");
 	AssertJUnit.assertEquals(runresult, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase010()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase054()" );
 }
 @Test(priority = 6 ,groups = { "implementationofbst" })
 public void testCase055() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase055()" );
 	chromedriver.navigate().refresh();
 	//treepage.clicktryherebtn();
 	String pythoncode =ExcelReader.readCell("Treepage", "2", "1");
@@ -836,11 +835,11 @@ public void testCase055() {
 	String message1 =ExcelReader.readCell("Treepage", "2", "2");
 	AssertJUnit.assertEquals(errormsg, message1);
 	
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase011()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase055()" );
 }
 @Test(priority = 3 ,groups = { "practice" })
 public void testCase056() {
-	LoggerLoad.logInfo("Entering Method : Register_TC.testCase032()" );
+	LoggerLoad.logInfo("Entering Method : Register_TC.testCase056()" );
 	//chromedriver.navigate().to(linkedlistpageurl);
 	treepage.clickTreeOverviewButton();
 	
@@ -851,7 +850,7 @@ public void testCase056() {
 	String url =chromedriver.getCurrentUrl();
 	LoggerLoad.logDebug("The current URL of the page is "+ url);
 	AssertJUnit.assertEquals(url,treepracticepage);
-	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase032()" );
+	LoggerLoad.logInfo("Exiting Method : Register_TC.testCase056()" );
 }
 
 }

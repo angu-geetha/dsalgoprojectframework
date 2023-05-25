@@ -1,4 +1,4 @@
-package pagefactory;
+package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,14 +10,14 @@ import driverFactory.Driver_Factory;
 import utilities.Configreader;
 import utilities.LoggerLoad;
 
-public class IndexPage {
+public class StartPage {
 	WebDriver chromedriver ;
 	final String dsalgoPageUrl = Configreader.getProperty("url"); ;
 	
 	@FindBy(xpath = "//button[text()='Get Started']") WebElement GetStarted;
 	//By getStartedButton = By.xpath("//button[text()='Get Started']");
 	
-	public IndexPage(WebDriver chromedriver) {
+	public StartPage(WebDriver chromedriver) {
 		super();
 		this.chromedriver = chromedriver;
 		PageFactory.initElements(chromedriver, this);
